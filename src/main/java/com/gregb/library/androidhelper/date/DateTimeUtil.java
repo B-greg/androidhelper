@@ -12,7 +12,7 @@
 package com.gregb.library.androidhelper.date;
 
 import android.util.Log;
-import com.smartsoftasia.bigglibrary.helper.Validator;
+import com.gregb.library.androidhelper.helper.Validator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

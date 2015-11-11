@@ -16,8 +16,8 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.widget.ImageView;
-import com.smartsoftasia.bigglibrary.R;
-import com.smartsoftasia.bigglibrary.utils.PixelUtil;
+import com.gregb.library.androidhelper.utils.PixelUtil;
+import com.gregb.library.androidhelper.R;
 import java.math.BigDecimal;
 
 /**

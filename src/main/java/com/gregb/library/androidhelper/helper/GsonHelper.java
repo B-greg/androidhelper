@@ -1,7 +1,7 @@
 package com.gregb.library.androidhelper.helper;
 
 import com.google.gson.Gson;
-import com.smartsoftasia.bigglibrary.utils.ParameterizedList;
+import com.gregb.library.androidhelper.utils.ParameterizedList;
 import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;

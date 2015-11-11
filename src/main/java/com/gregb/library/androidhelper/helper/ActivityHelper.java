@@ -119,21 +119,6 @@ public class ActivityHelper {
     }
 
 
-    public static void displayErrorDialog(Context context, Object respond){
-        if(respond instanceof JSONObject){
-            String displayError;
-            try {
-                JSONArray jsonArray = ((JSONObject)respond).getJSONArray("errors");
-                displayError = JSONHelper.jsonStringFromJsonArray(jsonArray);
-            } catch (JSONException e) {
-                e.printStackTrace();
-                displayError = "Error read json";
-            }
-            ActivityHelper.alertbox(context, "ERROR"  ,displayError);
-        }
-    }
-
-
 
     public static void hideKeyboard(Context c, IBinder windowToken) {
         InputMethodManager mgr = (InputMethodManager) c.getSystemService(Context.INPUT_METHOD_SERVICE);
