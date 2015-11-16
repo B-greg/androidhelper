@@ -16,6 +16,10 @@ public class Validator {
         return string != null && !string.trim().equals("") && !string.trim().equals("null");
     }
 
+  public static boolean isValid(List items){
+    return items != null && items.size() > 0;
+  }
+
     public static boolean isValidAllowEmpty(String string) {
         return string != null && !string.equals("") && !string.equals("null");
     }
