@@ -53,6 +53,10 @@ public class Validator {
   }
 
 
+  public static boolean isValidMobile(String number){
+    return android.util.Patterns.PHONE.matcher(number).matches();
+  }
+
 
   public static String validateUrl(String url) {
     if (url != null) {
