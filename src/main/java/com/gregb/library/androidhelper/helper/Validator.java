@@ -3,6 +3,7 @@ package com.gregb.library.androidhelper.helper;
 import android.content.Context;
 import android.content.res.Configuration;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by gui on 07/08/2014.
@@ -26,6 +27,10 @@ public class Validator {
 
   public static boolean isValid(Long l){
     return l != null;
+  }
+
+  public static boolean isValid(Objects o){
+    return o != null;
   }
 
   public static boolean isValid(List items) {
