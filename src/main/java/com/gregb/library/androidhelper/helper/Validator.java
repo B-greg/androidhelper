@@ -48,6 +48,14 @@ public class Validator {
     return true;
   }
 
+  public static boolean isValidDigit(String s){
+    return isValid(s) && s.length() == 1 && isNumeric(s);
+  }
+
+  public static boolean isNumeric(String s){
+    return s.matches("-?\\d+(\\.\\d+)?");
+  }
+
   public static boolean isValidOrEmpty(String string) {
     return string != null && !string.equals("") && !string.equals("null");
   }
