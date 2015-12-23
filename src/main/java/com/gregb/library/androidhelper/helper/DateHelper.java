@@ -2,6 +2,7 @@ package com.gregb.library.androidhelper.helper;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -73,4 +74,18 @@ public class DateHelper {
         }
         return gregorianCalendar;
     }
+
+  //Convert Date to Calendar
+  public static  Calendar dateToCalendar(Date date) {
+
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTime(date);
+    return calendar;
+
+  }
+
+  //Convert Calendar to Date
+  public static  Date calendarToDate(Calendar calendar) {
+    return calendar.getTime();
+  }
 }
