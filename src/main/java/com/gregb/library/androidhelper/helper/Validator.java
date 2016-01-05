@@ -42,7 +42,7 @@ public class Validator {
   }
 
   public static boolean isValidPassword(String password) {
-    return password.length() > 4;
+    return password.length() > 8;
   }
 
   public static boolean isValidLenght(String value, int maxValue, int minValue) {
