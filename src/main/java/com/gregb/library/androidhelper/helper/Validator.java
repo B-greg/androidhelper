@@ -28,7 +28,7 @@ public class Validator {
   public static boolean isValid(Long l){
     return l != null;
   }
-  
+
   public static boolean isValid(Float f){
     return f != null;
   }
