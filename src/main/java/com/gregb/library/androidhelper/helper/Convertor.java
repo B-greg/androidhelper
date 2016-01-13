@@ -17,6 +17,9 @@ public class Convertor {
   public static long toPrimitive(Long l){
     return Validator.isValid(l) ? l : 0;
   }
+  public static long toPrimitive(Float f){
+    return Validator.isValid(f) ? f : 0;
+  }
 
   public static String notNullAllowEmpty(String s) {
     return Validator.isValidOrEmpty(s) ? s : "";
