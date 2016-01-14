@@ -2,6 +2,7 @@ package com.gregb.library.androidhelper.helper;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.text.Editable;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,6 +16,10 @@ public class Validator {
 
   public static boolean isValid(String s) {
     return s != null && !s.trim().equals("") && !s.trim().equals("null");
+  }
+
+  public static boolean isValid(Editable s) {
+    return s != null;
   }
 
   public static boolean isValid(Integer i){
