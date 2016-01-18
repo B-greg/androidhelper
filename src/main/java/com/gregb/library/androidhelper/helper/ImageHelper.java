@@ -17,6 +17,7 @@ import java.net.URLConnection;
 
 public class ImageHelper {
 
+    public static final String TAG = "ImageHelper";
     public interface ImageDownloaderListener {
         public void onDone(boolean success, int result, Object response);
     }
@@ -314,16 +315,16 @@ public class ImageHelper {
                     while ((bufferLength = inputStream.read(buffer)) > 0) {
                         fos.write(buffer, 0, bufferLength);
                         downloadedSize += bufferLength;
-                        Log.i("downloadImagesToSdCard::Progress", "downloadedSize:" + downloadedSize + "totalSize:" + totalSize);
+                        Log.i(TAG, "downloadImagesToSdCard::Progress downloadedSize:" + downloadedSize + "totalSize:" + totalSize);
                     }
                 }
 
             }catch (Exception e){
-                Log.e("downloadImagesToSdCard::Error",e.toString());
+                Log.e(TAG,e.toString());
             }
 
             if(inputStream!=null)inputStream.close();
             fos.close();
-            Log.d("downloadImagesToSdCard::Final", "Image Saved in sdcard..");
+            Log.d(TAG, "Image Saved in sdcard..");
     }
 }

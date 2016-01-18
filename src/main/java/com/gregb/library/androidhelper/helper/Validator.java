@@ -58,7 +58,7 @@ public class Validator {
   }
 
   public static boolean isValidPassword(String password) {
-    return password.length() > 8;
+    return password.length() >= 8;
   }
 
   public static boolean isDouble(String s){
