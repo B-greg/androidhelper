@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.text.Editable;
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 /**
  * Created by gui on 07/08/2014.
@@ -13,6 +14,12 @@ public class Validator {
   private static final String TAG = "Validator";
 
   public static final String SPECIAL_CHARACTERS = "!@#$%^&*()~`-=_+[]{}|:\";',./<>?";
+
+  private static final Pattern DOUBLE_PATTERN = Pattern.compile(
+      "[\\x00-\\x20]*[+-]?(NaN|Infinity|((((\\p{Digit}+)(\\.)?((\\p{Digit}+)?)" +
+          "([eE][+-]?(\\p{Digit}+))?)|(\\.((\\p{Digit}+))([eE][+-]?(\\p{Digit}+))?)|" +
+          "(((0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+)))" +
+          "[pP][+-]?(\\p{Digit}+)))[fFdD]?))[\\x00-\\x20]*");
 
   public static boolean isValid(String s) {
     return s != null && !s.trim().equals("") && !s.trim().equals("null");
@@ -52,6 +59,10 @@ public class Validator {
 
   public static boolean isValidPassword(String password) {
     return password.length() > 8;
+  }
+
+  public static boolean isDouble(String s){
+    return Validator.isValid(s) && DOUBLE_PATTERN.matcher(s).matches();
   }
 
   public static boolean isValidLenght(String value, int maxValue, int minValue) {
