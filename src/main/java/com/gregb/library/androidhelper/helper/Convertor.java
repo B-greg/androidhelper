@@ -21,6 +21,10 @@ public class Convertor {
     return Validator.isValid(f) ? f : 0;
   }
 
+  public static double toPrimitive(Double d){
+    return Validator.isValid(d) ? d : 0;
+  }
+
   public static String notNullAllowEmpty(String s) {
     return Validator.isValidOrEmpty(s) ? s : "";
   }

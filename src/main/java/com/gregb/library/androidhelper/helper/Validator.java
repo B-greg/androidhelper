@@ -49,6 +49,10 @@ public class Validator {
     return o != null;
   }
 
+  public static boolean isValid(Double d){
+    return d != null;
+  }
+
   public static boolean isValid(List items) {
     return items != null && items.size() > 0;
   }
