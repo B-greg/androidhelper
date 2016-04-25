@@ -3,6 +3,7 @@ package com.gregb.library.androidhelper.helper;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
@@ -11,6 +12,8 @@ import android.view.WindowManager;
  * Created by gregoire on 9/9/14.
  */
 public class MetricsHelper {
+
+  public static final double MILE_KM = 1.60934;
 
     public static int getScreenWidth(Context context){
         Display display = MetricsHelper.getScreenDisplay(context);
@@ -63,6 +66,14 @@ public class MetricsHelper {
         return dp;
     }
 
-
+  /**
+   * Conver the mile into km.
+   * @param mile mile to convert, return 0 if null.
+   * @return distance in km
+   */
+  public static double convertMileToKm(@Nullable Float mile){
+    if (mile == null) return 0;
+    return mile * MILE_KM;
+  }
 
 }
