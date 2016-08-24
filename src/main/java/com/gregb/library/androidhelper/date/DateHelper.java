@@ -26,7 +26,7 @@ public class DateHelper {
     if (positionSeparator >= 0 && date.length()>0){
       day = date.substring(0, positionSeparator);
     }
-    return Integer.parseInt(day);
+    return Integer.parseInt(day.trim());
   }
   public static int monthFromStringDatePiker(@NonNull String date){
     int positionFirstSeparator = date.indexOf(DATE_SEPARATOR);
@@ -35,7 +35,7 @@ public class DateHelper {
     if (positionFirstSeparator >= 0 && positionLastSeparator >= 0 &&  date.length()>0){
       month = date.substring(positionFirstSeparator + 1, positionLastSeparator);
     }
-    return Integer.parseInt(month);
+    return Integer.parseInt(month.trim());
   }
   public static int yearFromStringDatePiker(@NonNull String date){
     int positionSeparator = date.indexOf(DATE_SEPARATOR);
@@ -43,7 +43,7 @@ public class DateHelper {
     if (positionSeparator >= 0 && date.length()>0){
       year = date.substring(positionSeparator + 1, date.length());
     }
-    return Integer.parseInt(year);
+    return Integer.parseInt(year.trim());
   }
 
 
