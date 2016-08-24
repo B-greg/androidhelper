@@ -21,15 +21,28 @@ public class DateHelper {
   }
 
   public static int dayFromStringDatePiker(@NonNull String date){
-    String day = date.substring(0, date.indexOf(DATE_SEPARATOR));
+    int positionSeparator = date.indexOf(DATE_SEPARATOR);
+    String day = "1";
+    if (positionSeparator >= 0 && date.length()>0){
+      day = date.substring(0, positionSeparator);
+    }
     return Integer.parseInt(day);
   }
   public static int monthFromStringDatePiker(@NonNull String date){
-    String month = date.substring(date.indexOf(DATE_SEPARATOR) + 1, date.lastIndexOf(DATE_SEPARATOR));
+    int positionFirstSeparator = date.indexOf(DATE_SEPARATOR);
+    int positionLastSeparator = date.indexOf(DATE_SEPARATOR);
+    String month = "1";
+    if (positionFirstSeparator >= 0 && positionLastSeparator >= 0 &&  date.length()>0){
+      month = date.substring(positionFirstSeparator + 1, positionLastSeparator);
+    }
     return Integer.parseInt(month);
   }
   public static int yearFromStringDatePiker(@NonNull String date){
-    String year = date.substring(date.lastIndexOf(DATE_SEPARATOR) + 1, date.length());
+    int positionSeparator = date.indexOf(DATE_SEPARATOR);
+    String year = "2000";
+    if (positionSeparator >= 0 && date.length()>0){
+      year = date.substring(positionSeparator + 1, date.length());
+    }
     return Integer.parseInt(year);
   }
 
