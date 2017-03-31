@@ -19,6 +19,7 @@ import android.view.inputmethod.InputMethodManager;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Method;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.UUID;
 
 public final class DeviceHelper extends Application {
@@ -206,8 +207,12 @@ public final class DeviceHelper extends Application {
    * @return true if metric system
    */
   public static boolean isMetricSystem(){
-    return !(Locale.getDefault().getISO3Country().equalsIgnoreCase(Locale.US.getISO3Country()) ||
-        Locale.getDefault().getISO3Country().equalsIgnoreCase("mmr"));
+    try {
+      return !(Locale.getDefault().getISO3Country().equalsIgnoreCase(Locale.US.getISO3Country()) ||
+          Locale.getDefault().getISO3Country().equalsIgnoreCase("mmr"));
+    } catch (MissingResourceException e) {
+      return false;
+    }
   }
 
   public static String getMetricsUnit(){
