@@ -1,10 +1,11 @@
 package com.gregb.library.androidhelper.widget;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by androiddev01 on 12/21/2015 AD.

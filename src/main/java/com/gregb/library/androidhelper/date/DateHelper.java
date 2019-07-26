@@ -1,6 +1,6 @@
 package com.gregb.library.androidhelper.date;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by gregoire on 10/5/14.

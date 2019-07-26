@@ -3,7 +3,7 @@ package com.gregb.library.androidhelper.helper;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;

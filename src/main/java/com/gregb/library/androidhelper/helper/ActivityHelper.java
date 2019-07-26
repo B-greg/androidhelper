@@ -8,17 +8,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Created by gregoire on 7/28/14.
@@ -92,9 +90,6 @@ public class ActivityHelper {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
-
-
 
     public static ProgressDialog displayProgressDialog(Context context,String title, String content){
         return ProgressDialog.show(context, StringHelper.replaceNull(title), StringHelper.replaceNull(content), true);
